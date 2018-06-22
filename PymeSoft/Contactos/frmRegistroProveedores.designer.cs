@@ -1,6 +1,6 @@
-﻿namespace DomPlastic_ERP
+﻿namespace PymeSoft
 {
-    partial class frmRegistroSuplidores
+    partial class frmRegistroProveedores
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroSuplidores));
-            this.lblUtimaVenta = new System.Windows.Forms.LinkLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroProveedores));
+            this.lblUtimaCompra = new System.Windows.Forms.LinkLabel();
             this.lblBalancePendiente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaRegistro = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.rdbCodigo = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPaginaWeb = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,20 +50,10 @@
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnRegistroSiguiente = new System.Windows.Forms.Button();
-            this.btnRegistroAnterior = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnEliminarSuplidor = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnRetornar = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
-            this.tabControlClientes = new System.Windows.Forms.TabControl();
+            this.tabControlProveedores = new System.Windows.Forms.TabControl();
             this.tabDatosGenerales = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.txtTelefono2 = new System.Windows.Forms.MaskedTextBox();
@@ -73,7 +63,6 @@
             this.txtFax = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTelefono1 = new System.Windows.Forms.MaskedTextBox();
-            this.pbxCliente = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -91,34 +80,46 @@
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.chkBloqueado = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.cmbFormasPagos = new System.Windows.Forms.ComboBox();
+            this.cmbTerminosPagos = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gbxOpciones = new System.Windows.Forms.GroupBox();
+            this.btnRegistroSiguiente = new System.Windows.Forms.Button();
+            this.btnRegistroAnterior = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnQuitarFoto = new System.Windows.Forms.Button();
+            this.pbxProveedor = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnRetornar = new System.Windows.Forms.Button();
+            this.btnEliminarProveedor = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.gbxParametros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabControlClientes.SuspendLayout();
+            this.tabControlProveedores.SuspendLayout();
             this.tabDatosGenerales.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCliente)).BeginInit();
             this.tabCondiciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.gbxOpciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblUtimaVenta
+            // lblUtimaCompra
             // 
-            this.lblUtimaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUtimaVenta.BackColor = System.Drawing.Color.White;
-            this.lblUtimaVenta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUtimaVenta.Location = new System.Drawing.Point(579, 259);
-            this.lblUtimaVenta.Name = "lblUtimaVenta";
-            this.lblUtimaVenta.Size = new System.Drawing.Size(74, 17);
-            this.lblUtimaVenta.TabIndex = 11;
-            this.lblUtimaVenta.TabStop = true;
-            this.lblUtimaVenta.Text = "-";
-            this.lblUtimaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUtimaCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUtimaCompra.BackColor = System.Drawing.Color.White;
+            this.lblUtimaCompra.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUtimaCompra.Location = new System.Drawing.Point(579, 259);
+            this.lblUtimaCompra.Name = "lblUtimaCompra";
+            this.lblUtimaCompra.Size = new System.Drawing.Size(74, 17);
+            this.lblUtimaCompra.TabIndex = 11;
+            this.lblUtimaCompra.TabStop = true;
+            this.lblUtimaCompra.Text = "-";
+            this.lblUtimaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBalancePendiente
             // 
@@ -138,11 +139,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(771, 84);
+            this.label1.Location = new System.Drawing.Point(756, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 17);
+            this.label1.Size = new System.Drawing.Size(158, 17);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Registro de Suplidores";
+            this.label1.Text = "Registro de Proveedores";
             // 
             // lblFechaRegistro
             // 
@@ -188,7 +189,8 @@
             this.txtCriterio.Location = new System.Drawing.Point(121, 47);
             this.txtCriterio.Name = "txtCriterio";
             this.txtCriterio.Size = new System.Drawing.Size(430, 25);
-            this.txtCriterio.TabIndex = 20;
+            this.txtCriterio.TabIndex = 21;
+            this.txtCriterio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCriterio_KeyPress);
             // 
             // rdbIdentificacion
             // 
@@ -197,10 +199,11 @@
             this.rdbIdentificacion.Location = new System.Drawing.Point(370, 20);
             this.rdbIdentificacion.Name = "rdbIdentificacion";
             this.rdbIdentificacion.Size = new System.Drawing.Size(100, 21);
-            this.rdbIdentificacion.TabIndex = 23;
+            this.rdbIdentificacion.TabIndex = 24;
             this.rdbIdentificacion.TabStop = true;
             this.rdbIdentificacion.Text = "Cédula/RNC";
             this.rdbIdentificacion.UseVisualStyleBackColor = true;
+            this.rdbIdentificacion.CheckedChanged += new System.EventHandler(this.rdbIdentificacion_CheckedChanged);
             // 
             // rdbNombre
             // 
@@ -209,10 +212,11 @@
             this.rdbNombre.Location = new System.Drawing.Point(266, 19);
             this.rdbNombre.Name = "rdbNombre";
             this.rdbNombre.Size = new System.Drawing.Size(76, 21);
-            this.rdbNombre.TabIndex = 22;
+            this.rdbNombre.TabIndex = 23;
             this.rdbNombre.TabStop = true;
             this.rdbNombre.Text = "Nombre";
             this.rdbNombre.UseVisualStyleBackColor = true;
+            this.rdbNombre.CheckedChanged += new System.EventHandler(this.rdbNombre_CheckedChanged);
             // 
             // rdbCodigo
             // 
@@ -220,10 +224,11 @@
             this.rdbCodigo.Location = new System.Drawing.Point(172, 19);
             this.rdbCodigo.Name = "rdbCodigo";
             this.rdbCodigo.Size = new System.Drawing.Size(70, 21);
-            this.rdbCodigo.TabIndex = 21;
+            this.rdbCodigo.TabIndex = 22;
             this.rdbCodigo.TabStop = true;
             this.rdbCodigo.Text = "Código";
             this.rdbCodigo.UseVisualStyleBackColor = true;
+            this.rdbCodigo.CheckedChanged += new System.EventHandler(this.rdbCodigo_CheckedChanged);
             // 
             // label16
             // 
@@ -232,26 +237,28 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(575, 240);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(81, 17);
+            this.label16.Size = new System.Drawing.Size(94, 17);
             this.label16.TabIndex = 30;
-            this.label16.Text = "Ultima Venta";
+            this.label16.Text = "Ultima Compra";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dgvClientes
+            // dgvProveedores
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.AllowUserToResizeColumns = false;
-            this.dgvClientes.AllowUserToResizeRows = false;
-            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvProveedores.AllowUserToAddRows = false;
+            this.dgvProveedores.AllowUserToDeleteRows = false;
+            this.dgvProveedores.AllowUserToResizeColumns = false;
+            this.dgvProveedores.AllowUserToResizeRows = false;
+            this.dgvProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(6, 20);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.Size = new System.Drawing.Size(734, 130);
-            this.dgvClientes.TabIndex = 24;
+            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvProveedores.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedores.Location = new System.Drawing.Point(6, 20);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.ReadOnly = true;
+            this.dgvProveedores.Size = new System.Drawing.Size(734, 130);
+            this.dgvProveedores.TabIndex = 25;
+            this.dgvProveedores.DoubleClick += new System.EventHandler(this.dgvProveedores_DoubleClick);
             // 
             // label15
             // 
@@ -274,20 +281,20 @@
             this.txtPaginaWeb.MaxLength = 100;
             this.txtPaginaWeb.Name = "txtPaginaWeb";
             this.txtPaginaWeb.Size = new System.Drawing.Size(496, 25);
-            this.txtPaginaWeb.TabIndex = 9;
+            this.txtPaginaWeb.TabIndex = 10;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dgvClientes);
+            this.groupBox1.Controls.Add(this.dgvProveedores);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(4, 498);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(746, 160);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listado de Suplidores";
+            this.groupBox1.Text = "Listado de Proveedores";
             // 
             // txtCorreoElectronico
             // 
@@ -309,7 +316,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(496, 50);
-            this.txtObservaciones.TabIndex = 10;
+            this.txtObservaciones.TabIndex = 11;
             // 
             // txtDireccion
             // 
@@ -349,144 +356,18 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(101, 25);
             this.txtCodigo.TabIndex = 1;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackgroundImage = global::PymeSoft.Properties.Resources.Save_icon;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(36, 69);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(64, 64);
-            this.btnGuardar.TabIndex = 15;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistroSiguiente
-            // 
-            this.btnRegistroSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistroSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistroSiguiente.BackgroundImage")));
-            this.btnRegistroSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegistroSiguiente.Enabled = false;
-            this.btnRegistroSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnRegistroSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnRegistroSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegistroSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistroSiguiente.Location = new System.Drawing.Point(841, 108);
-            this.btnRegistroSiguiente.Name = "btnRegistroSiguiente";
-            this.btnRegistroSiguiente.Size = new System.Drawing.Size(40, 40);
-            this.btnRegistroSiguiente.TabIndex = 31;
-            this.btnRegistroSiguiente.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistroAnterior
-            // 
-            this.btnRegistroAnterior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistroAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistroAnterior.BackgroundImage")));
-            this.btnRegistroAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegistroAnterior.Enabled = false;
-            this.btnRegistroAnterior.FlatAppearance.BorderSize = 0;
-            this.btnRegistroAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnRegistroAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegistroAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistroAnterior.Location = new System.Drawing.Point(795, 108);
-            this.btnRegistroAnterior.Name = "btnRegistroAnterior";
-            this.btnRegistroAnterior.Size = new System.Drawing.Size(40, 40);
-            this.btnRegistroAnterior.TabIndex = 29;
-            this.btnRegistroAnterior.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(816, 539);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 48);
-            this.button5.TabIndex = 34;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(816, 470);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 48);
-            this.button4.TabIndex = 33;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            // 
-            // btnEliminarSuplidor
-            // 
-            this.btnEliminarSuplidor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarSuplidor.BackgroundImage")));
-            this.btnEliminarSuplidor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminarSuplidor.FlatAppearance.BorderSize = 0;
-            this.btnEliminarSuplidor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnEliminarSuplidor.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminarSuplidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarSuplidor.Location = new System.Drawing.Point(36, 129);
-            this.btnEliminarSuplidor.Name = "btnEliminarSuplidor";
-            this.btnEliminarSuplidor.Size = new System.Drawing.Size(64, 64);
-            this.btnEliminarSuplidor.TabIndex = 16;
-            this.btnEliminarSuplidor.UseVisualStyleBackColor = true;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(239, 13);
+            this.label24.Location = new System.Drawing.Point(249, 13);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(14, 17);
             this.label24.TabIndex = 39;
             this.label24.Text = "*";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PymeSoft.Properties.Resources.help_icon_2;
-            this.pictureBox3.Location = new System.Drawing.Point(362, 39);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(807, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnRetornar
-            // 
-            this.btnRetornar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRetornar.BackgroundImage")));
-            this.btnRetornar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRetornar.FlatAppearance.BorderSize = 0;
-            this.btnRetornar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnRetornar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRetornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetornar.Location = new System.Drawing.Point(46, 204);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(40, 40);
-            this.btnRetornar.TabIndex = 17;
-            this.btnRetornar.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -499,20 +380,6 @@
             this.label20.Text = "Celular";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackgroundImage = global::PymeSoft.Properties.Resources.New_icon;
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(46, 24);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
-            this.btnNuevo.TabIndex = 14;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
             // txtCelular
             // 
             this.txtCelular.Culture = new System.Globalization.CultureInfo("es-ES");
@@ -520,31 +387,32 @@
             this.txtCelular.Location = new System.Drawing.Point(346, 181);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(160, 25);
-            this.txtCelular.TabIndex = 37;
+            this.txtCelular.TabIndex = 9;
             // 
-            // tabControlClientes
+            // tabControlProveedores
             // 
-            this.tabControlClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControlProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlClientes.Controls.Add(this.tabDatosGenerales);
-            this.tabControlClientes.Controls.Add(this.tabCondiciones);
-            this.tabControlClientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlClientes.Location = new System.Drawing.Point(0, 0);
-            this.tabControlClientes.Name = "tabControlClientes";
-            this.tabControlClientes.SelectedIndex = 0;
-            this.tabControlClientes.Size = new System.Drawing.Size(750, 403);
-            this.tabControlClientes.TabIndex = 26;
+            this.tabControlProveedores.Controls.Add(this.tabDatosGenerales);
+            this.tabControlProveedores.Controls.Add(this.tabCondiciones);
+            this.tabControlProveedores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlProveedores.Location = new System.Drawing.Point(0, 0);
+            this.tabControlProveedores.Name = "tabControlProveedores";
+            this.tabControlProveedores.SelectedIndex = 0;
+            this.tabControlProveedores.Size = new System.Drawing.Size(750, 403);
+            this.tabControlProveedores.TabIndex = 12;
             // 
             // tabDatosGenerales
             // 
             this.tabDatosGenerales.BackColor = System.Drawing.SystemColors.Control;
             this.tabDatosGenerales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabDatosGenerales.Controls.Add(this.btnQuitarFoto);
             this.tabDatosGenerales.Controls.Add(this.label24);
             this.tabDatosGenerales.Controls.Add(this.label20);
             this.tabDatosGenerales.Controls.Add(this.txtCelular);
             this.tabDatosGenerales.Controls.Add(this.label18);
             this.tabDatosGenerales.Controls.Add(this.txtTelefono2);
-            this.tabDatosGenerales.Controls.Add(this.lblUtimaVenta);
+            this.tabDatosGenerales.Controls.Add(this.lblUtimaCompra);
             this.tabDatosGenerales.Controls.Add(this.lblBalancePendiente);
             this.tabDatosGenerales.Controls.Add(this.lblFechaRegistro);
             this.tabDatosGenerales.Controls.Add(this.label17);
@@ -563,7 +431,7 @@
             this.tabDatosGenerales.Controls.Add(this.txtFax);
             this.tabDatosGenerales.Controls.Add(this.label10);
             this.tabDatosGenerales.Controls.Add(this.txtTelefono1);
-            this.tabDatosGenerales.Controls.Add(this.pbxCliente);
+            this.tabDatosGenerales.Controls.Add(this.pbxProveedor);
             this.tabDatosGenerales.Controls.Add(this.label6);
             this.tabDatosGenerales.Controls.Add(this.label5);
             this.tabDatosGenerales.Controls.Add(this.label4);
@@ -595,7 +463,7 @@
             this.txtTelefono2.Location = new System.Drawing.Point(180, 134);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(160, 25);
-            this.txtTelefono2.TabIndex = 35;
+            this.txtTelefono2.TabIndex = 6;
             // 
             // label13
             // 
@@ -635,7 +503,7 @@
             this.txtFax.Location = new System.Drawing.Point(346, 134);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(160, 25);
-            this.txtFax.TabIndex = 8;
+            this.txtFax.TabIndex = 7;
             // 
             // label10
             // 
@@ -655,19 +523,7 @@
             this.txtTelefono1.Location = new System.Drawing.Point(14, 134);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(160, 25);
-            this.txtTelefono1.TabIndex = 7;
-            // 
-            // pbxCliente
-            // 
-            this.pbxCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbxCliente.Image")));
-            this.pbxCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbxCliente.InitialImage")));
-            this.pbxCliente.Location = new System.Drawing.Point(553, 33);
-            this.pbxCliente.Name = "pbxCliente";
-            this.pbxCliente.Size = new System.Drawing.Size(133, 119);
-            this.pbxCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxCliente.TabIndex = 10;
-            this.pbxCliente.TabStop = false;
+            this.txtTelefono1.TabIndex = 5;
             // 
             // label6
             // 
@@ -705,9 +561,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(118, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 17);
+            this.label3.Size = new System.Drawing.Size(134, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre del Suplidor";
+            this.label3.Text = "Nombre del Proveedor";
             // 
             // label2
             // 
@@ -722,18 +578,18 @@
             // tabCondiciones
             // 
             this.tabCondiciones.Controls.Add(this.linkLabel1);
-            this.tabCondiciones.Controls.Add(this.pictureBox3);
             this.tabCondiciones.Controls.Add(this.label14);
             this.tabCondiciones.Controls.Add(this.dgvContactos);
             this.tabCondiciones.Controls.Add(this.chkBloqueado);
             this.tabCondiciones.Controls.Add(this.label23);
-            this.tabCondiciones.Controls.Add(this.cmbFormasPagos);
+            this.tabCondiciones.Controls.Add(this.cmbTerminosPagos);
+            this.tabCondiciones.Controls.Add(this.pictureBox3);
             this.tabCondiciones.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCondiciones.Location = new System.Drawing.Point(4, 26);
             this.tabCondiciones.Name = "tabCondiciones";
             this.tabCondiciones.Size = new System.Drawing.Size(742, 373);
             this.tabCondiciones.TabIndex = 2;
-            this.tabCondiciones.Text = "Condiciones y Contactos";
+            this.tabCondiciones.Text = "Condiciones";
             this.tabCondiciones.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
@@ -746,6 +602,7 @@
             this.linkLabel1.TabIndex = 36;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Agregar Persona de Contacto";
+            this.linkLabel1.Visible = false;
             // 
             // label14
             // 
@@ -828,9 +685,10 @@
             this.chkBloqueado.Location = new System.Drawing.Point(276, 38);
             this.chkBloqueado.Name = "chkBloqueado";
             this.chkBloqueado.Size = new System.Drawing.Size(91, 21);
-            this.chkBloqueado.TabIndex = 28;
+            this.chkBloqueado.TabIndex = 14;
             this.chkBloqueado.Text = "Bloqueado?";
             this.chkBloqueado.UseVisualStyleBackColor = true;
+            this.chkBloqueado.CheckedChanged += new System.EventHandler(this.chkBloqueado_CheckedChanged);
             // 
             // label23
             // 
@@ -843,16 +701,16 @@
             this.label23.Text = "Términos de Pago por defecto";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbFormasPagos
+            // cmbTerminosPagos
             // 
-            this.cmbFormasPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFormasPagos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFormasPagos.FormattingEnabled = true;
-            this.cmbFormasPagos.Location = new System.Drawing.Point(14, 34);
-            this.cmbFormasPagos.MaxDropDownItems = 10;
-            this.cmbFormasPagos.Name = "cmbFormasPagos";
-            this.cmbFormasPagos.Size = new System.Drawing.Size(240, 25);
-            this.cmbFormasPagos.TabIndex = 26;
+            this.cmbTerminosPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTerminosPagos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTerminosPagos.FormattingEnabled = true;
+            this.cmbTerminosPagos.Location = new System.Drawing.Point(14, 34);
+            this.cmbTerminosPagos.MaxDropDownItems = 10;
+            this.cmbTerminosPagos.Name = "cmbTerminosPagos";
+            this.cmbTerminosPagos.Size = new System.Drawing.Size(240, 25);
+            this.cmbTerminosPagos.TabIndex = 13;
             // 
             // label7
             // 
@@ -872,7 +730,7 @@
             this.gbxOpciones.BackColor = System.Drawing.SystemColors.Control;
             this.gbxOpciones.Controls.Add(this.btnNuevo);
             this.gbxOpciones.Controls.Add(this.btnRetornar);
-            this.gbxOpciones.Controls.Add(this.btnEliminarSuplidor);
+            this.gbxOpciones.Controls.Add(this.btnEliminarProveedor);
             this.gbxOpciones.Controls.Add(this.btnGuardar);
             this.gbxOpciones.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.gbxOpciones.Location = new System.Drawing.Point(770, 158);
@@ -882,7 +740,183 @@
             this.gbxOpciones.TabStop = false;
             this.gbxOpciones.Text = "Opciones";
             // 
-            // frmRegistroSuplidores
+            // btnRegistroSiguiente
+            // 
+            this.btnRegistroSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistroSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistroSiguiente.BackgroundImage")));
+            this.btnRegistroSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegistroSiguiente.Enabled = false;
+            this.btnRegistroSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnRegistroSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRegistroSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRegistroSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroSiguiente.Location = new System.Drawing.Point(841, 108);
+            this.btnRegistroSiguiente.Name = "btnRegistroSiguiente";
+            this.btnRegistroSiguiente.Size = new System.Drawing.Size(40, 40);
+            this.btnRegistroSiguiente.TabIndex = 16;
+            this.btnRegistroSiguiente.UseVisualStyleBackColor = true;
+            this.btnRegistroSiguiente.Click += new System.EventHandler(this.btnRegistroSiguiente_Click);
+            // 
+            // btnRegistroAnterior
+            // 
+            this.btnRegistroAnterior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistroAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistroAnterior.BackgroundImage")));
+            this.btnRegistroAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegistroAnterior.Enabled = false;
+            this.btnRegistroAnterior.FlatAppearance.BorderSize = 0;
+            this.btnRegistroAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRegistroAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRegistroAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroAnterior.Location = new System.Drawing.Point(795, 108);
+            this.btnRegistroAnterior.Name = "btnRegistroAnterior";
+            this.btnRegistroAnterior.Size = new System.Drawing.Size(40, 40);
+            this.btnRegistroAnterior.TabIndex = 15;
+            this.btnRegistroAnterior.UseVisualStyleBackColor = true;
+            this.btnRegistroAnterior.Click += new System.EventHandler(this.btnRegistroAnterior_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(816, 539);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(48, 48);
+            this.button5.TabIndex = 34;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(816, 470);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(48, 48);
+            this.button4.TabIndex = 33;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(807, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnQuitarFoto
+            // 
+            this.btnQuitarFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuitarFoto.BackgroundImage")));
+            this.btnQuitarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuitarFoto.FlatAppearance.BorderSize = 0;
+            this.btnQuitarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnQuitarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnQuitarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarFoto.Location = new System.Drawing.Point(606, 156);
+            this.btnQuitarFoto.Name = "btnQuitarFoto";
+            this.btnQuitarFoto.Size = new System.Drawing.Size(24, 20);
+            this.btnQuitarFoto.TabIndex = 41;
+            this.btnQuitarFoto.UseVisualStyleBackColor = true;
+            this.btnQuitarFoto.Visible = false;
+            this.btnQuitarFoto.Click += new System.EventHandler(this.btnQuitarFoto_Click);
+            // 
+            // pbxProveedor
+            // 
+            this.pbxProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxProveedor.Image = ((System.Drawing.Image)(resources.GetObject("pbxProveedor.Image")));
+            this.pbxProveedor.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbxProveedor.InitialImage")));
+            this.pbxProveedor.Location = new System.Drawing.Point(553, 33);
+            this.pbxProveedor.Name = "pbxProveedor";
+            this.pbxProveedor.Size = new System.Drawing.Size(133, 119);
+            this.pbxProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxProveedor.TabIndex = 10;
+            this.pbxProveedor.TabStop = false;
+            this.pbxProveedor.Click += new System.EventHandler(this.pbxProveedor_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PymeSoft.Properties.Resources.help_icon_2;
+            this.pictureBox3.Location = new System.Drawing.Point(362, 39);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackgroundImage = global::PymeSoft.Properties.Resources.New_icon;
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Location = new System.Drawing.Point(46, 24);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevo.TabIndex = 17;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnRetornar
+            // 
+            this.btnRetornar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRetornar.BackgroundImage")));
+            this.btnRetornar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRetornar.FlatAppearance.BorderSize = 0;
+            this.btnRetornar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRetornar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRetornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetornar.Location = new System.Drawing.Point(46, 204);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(40, 40);
+            this.btnRetornar.TabIndex = 20;
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
+            // 
+            // btnEliminarProveedor
+            // 
+            this.btnEliminarProveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProveedor.BackgroundImage")));
+            this.btnEliminarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminarProveedor.FlatAppearance.BorderSize = 0;
+            this.btnEliminarProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnEliminarProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProveedor.Location = new System.Drawing.Point(36, 129);
+            this.btnEliminarProveedor.Name = "btnEliminarProveedor";
+            this.btnEliminarProveedor.Size = new System.Drawing.Size(64, 64);
+            this.btnEliminarProveedor.TabIndex = 19;
+            this.btnEliminarProveedor.UseVisualStyleBackColor = true;
+            this.btnEliminarProveedor.Click += new System.EventHandler(this.btnEliminarProveedor_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackgroundImage = global::PymeSoft.Properties.Resources.Save_icon;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Location = new System.Drawing.Point(36, 69);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(64, 64);
+            this.btnGuardar.TabIndex = 18;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // frmRegistroProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -896,28 +930,29 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.tabControlClientes);
+            this.Controls.Add(this.tabControlProveedores);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.gbxOpciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmRegistroSuplidores";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmRegistroProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PymeSoft 1.0 - Registro de Suplidores";
-            this.Load += new System.EventHandler(this.frmRegistrosuplidores_Load);
+            this.Text = "PymeSoft 1.0 - Registro de Proveedores";
+            this.Load += new System.EventHandler(this.frmRegistroProveedores_Load);
             this.gbxParametros.ResumeLayout(false);
             this.gbxParametros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabControlClientes.ResumeLayout(false);
+            this.tabControlProveedores.ResumeLayout(false);
             this.tabDatosGenerales.ResumeLayout(false);
             this.tabDatosGenerales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCliente)).EndInit();
             this.tabCondiciones.ResumeLayout(false);
             this.tabCondiciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.gbxOpciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -925,7 +960,7 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel lblUtimaVenta;
+        private System.Windows.Forms.LinkLabel lblUtimaCompra;
         private System.Windows.Forms.Label lblBalancePendiente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechaRegistro;
@@ -936,7 +971,7 @@
         private System.Windows.Forms.RadioButton rdbNombre;
         private System.Windows.Forms.RadioButton rdbCodigo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.DataGridView dgvProveedores;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtPaginaWeb;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -951,7 +986,7 @@
         private System.Windows.Forms.Button btnRegistroAnterior;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnEliminarSuplidor;
+        private System.Windows.Forms.Button btnEliminarProveedor;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -959,7 +994,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.MaskedTextBox txtCelular;
-        private System.Windows.Forms.TabControl tabControlClientes;
+        private System.Windows.Forms.TabControl tabControlProveedores;
         private System.Windows.Forms.TabPage tabDatosGenerales;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.MaskedTextBox txtTelefono2;
@@ -969,7 +1004,7 @@
         private System.Windows.Forms.MaskedTextBox txtFax;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox txtTelefono1;
-        private System.Windows.Forms.PictureBox pbxCliente;
+        private System.Windows.Forms.PictureBox pbxProveedor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -987,9 +1022,10 @@
         private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
         private System.Windows.Forms.CheckBox chkBloqueado;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cmbFormasPagos;
+        private System.Windows.Forms.ComboBox cmbTerminosPagos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox gbxOpciones;
+        private System.Windows.Forms.Button btnQuitarFoto;
 
     }
 }

@@ -12,10 +12,10 @@ using System.IO;
 
 namespace PymeSoft
 {
-    public partial class frmRegistroClientes : Form
+    public partial class frmRegistroProveedores : Form
     {
 
-        public frmRegistroClientes()
+        public frmRegistroProveedores()
         {
             InitializeComponent();
         }
@@ -31,11 +31,10 @@ namespace PymeSoft
         String campos;
         String valores;
         String condicion;
-        String SQL = " SELECT clientes.id as ID, personas.persona_nombre as Nombre, personas.persona_identificacion as Identificacion, " +
+        String SQL = " SELECT proveedores.id as ID, personas.persona_nombre as Nombre, personas.persona_identificacion as Identificacion, " +
                      " personas.persona_direccion as Direccion, personas.persona_telefono_principal as 'Telefono Principal', personas.persona_celular " +
-                     " as Celular, personas.persona_correo_electronico as 'Correo Electrónico', p2.persona_nombre as Vendedor, clientes.cliente_balance as Balance FROM clientes INNER JOIN " +
-                     " Personas ON clientes.persona_id = personas.id INNER JOIN vendedores ON clientes.vendedor_id = vendedores.id INNER JOIN personas p2 " +
-                     " ON vendedores.persona_id = p2.id";
+                     " as celular, personas.persona_correo_electronico as 'Correo Electrónico', proveedores.proveedor_balance as Balance FROM proveedores INNER JOIN " +
+                     " Personas ON proveedores.persona_id = personas.id";
         String query = "";
         /********************************************************************************
          *                              LlenarDatagridView()                            *
@@ -47,30 +46,13 @@ namespace PymeSoft
             try
             {
 
-                conexion.consultar(SQL, "Clientes");
-                dgvClientes.DataSource = conexion.ds.Tables["Clientes"];
-                dgvClientes.Refresh();
+                conexion.consultar(SQL, "Proveedores");
+                dgvProveedores.DataSource = conexion.ds.Tables["Proveedores"];
+                dgvProveedores.Refresh();
             }
             catch (Exception Error)
             {
                 MessageBox.Show(Error.Message, "Aviso - LLenarDataGridView", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }
-        }
-
-        private void LLenarComboBoxVendedores()
-        {
-            //Llenamos el combobox cmbMunicipios con los registros que hay en la tabla municipios
-            string sql = "select vendedores.id, personas.persona_nombre from vendedores INNER JOIN Personas ON vendedores.persona_id = personas.id";
-            try
-            {
-                cmbVendedores.DataSource = conexion.llenarComboBox(sql, "vendedores");
-                cmbVendedores.DisplayMember = "persona_nombre";
-                cmbVendedores.ValueMember = "id";
-                cmbVendedores.Refresh();
-            }
-            catch (Exception Error)
-            {
-                MessageBox.Show(Error.Message, "Aviso  - LLenarComboBoxVendedores", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
 
@@ -127,23 +109,28 @@ namespace PymeSoft
                     ((ComboBox)c).SelectedItem = "";
                 }
             }
-            pbxCliente.Image = PymeSoft.Properties.Resources.default_user_icon;
-            pbxCliente.ImageLocation = "";
+            pbxProveedor.Image = PymeSoft.Properties.Resources.default_user_icon;
+            pbxProveedor.ImageLocation = "";
             btnQuitarFoto.Visible = false;
             dgvContactos.Rows.Clear();
-            lblFechaRegistro.Text = lblUtimaVenta.Text = "-";
+            lblFechaRegistro.Text = lblUtimaCompra.Text = "-";
             lblBalancePendiente.Text = "0.00";
-            cmbVendedores.SelectedIndex = cmbTerminosPagos.SelectedIndex = 0;
+            cmbTerminosPagos.SelectedIndex = 0;
             btnRegistroAnterior.Enabled = btnRegistroSiguiente.Enabled = false;
         }
 
 
+        /********************************************************************************
+         *                              BuscarRegistroMayoryMenor()                      *
+         *                                     -                                         *
+         *     Metodo para seleccionar y extraer el primer y el ultimo registro de la BD *
+         ********************************************************************************/
         private void BuscarRegistroMayoryMenor()
         {
             try
             {
                 //Para extraer los datos del registro seleccionado en la base de datos
-                MySqlDataReader LectorClientes;
+                MySqlDataReader LectorProveedores;
                 //Abrimos la conexion hacia la BD
                 conexion.conexion.Open();
                 //Creamos una instruccion o comando SQL
@@ -151,32 +138,32 @@ namespace PymeSoft
                 //Le asignamos la conexion actual
                 Comando.Connection = conexion.conexion;
                 //Enviamos el parametro o la consulta que se desea realizar en SQL
-                Comando.CommandText = "Select count(id) From Clientes";
+                Comando.CommandText = "Select count(id) From Proveedores";
                 //Ejecutamos el comando y almacenamos el resultado en el Lector de datos.
-                LectorClientes = Comando.ExecuteReader();
+                LectorProveedores = Comando.ExecuteReader();
                 //Si se encontró un registro, entonces mostramos los datos de este registro en el formulario.
-                if (LectorClientes.Read() == true)
+                if (LectorProveedores.Read() == true)
                 {
-                    if (LectorClientes.GetInt32(0) > 0)
+                    if (LectorProveedores.GetInt32(0) > 0)
                     {
-                        LectorClientes.Close();
+                        LectorProveedores.Close();
                         //Enviamos el parametro o la consulta que se desea realizar en SQL
-                        Comando.CommandText = "Select max(id), min(id) From Clientes";
+                        Comando.CommandText = "Select max(id), min(id) From Proveedores";
                         //Ejecutamos el comando y almacenamos el resultado en el Lector de datos.
-                        LectorClientes = Comando.ExecuteReader();
-                        if (LectorClientes.Read() == true)
+                        LectorProveedores = Comando.ExecuteReader();
+                        if (LectorProveedores.Read() == true)
                         {
                             //Asignando el valor de cada campo al objeto correspondiente
-                            mayor = LectorClientes.GetInt32(0);
-                            menor = LectorClientes.GetInt32(1);
-                            LectorClientes.Close();
+                            mayor = LectorProveedores.GetInt32(0);
+                            menor = LectorProveedores.GetInt32(1);
+                            LectorProveedores.Close();
                         }
                     }
                 }
                 else
                 {
                     //Borramos el lector que almacena el registro, para poder utilizarlo nuevamente
-                    LectorClientes.Close();
+                    LectorProveedores.Close();
                 }
             }
             catch (Exception Error)
@@ -200,7 +187,7 @@ namespace PymeSoft
             try
             {
                 //Para extraer los datos del registro seleccionado en la base de datos
-                MySqlDataReader LectorClientes;
+                MySqlDataReader LectorProveedores;
 
                 //Abrimos la conexion hacia la BD
                 conexion.conexion.Open();
@@ -212,53 +199,50 @@ namespace PymeSoft
                 Comando.Connection = conexion.conexion;
 
                 //Enviamos el parametro o la consulta que se desea realizar en SQL
-                Comando.CommandText = "select clientes.*, personas.* from clientes INNER JOIN personas ON clientes.persona_id = personas.id where clientes.id =" + txtCodigo.Text;
+                Comando.CommandText = "select Proveedores.*, personas.* from Proveedores INNER JOIN personas ON Proveedores.persona_id = personas.id where Proveedores.id =" + txtCodigo.Text;
 
                 //Ejecutamos el comando y almacenamos el resultado en el Lector de datos.
-                LectorClientes = Comando.ExecuteReader();
+                LectorProveedores = Comando.ExecuteReader();
 
                 //Si se encontró un registro, entonces mostramos los datos de este registro en el formulario.
-                if (LectorClientes.Read() == true)
+                if (LectorProveedores.Read() == true)
                 {
                     //Asignando el valor de cada campo al objeto correspondiente
-                    IdPersona = LectorClientes.GetInt32(1);
-                    cmbVendedores.SelectedValue = LectorClientes.GetInt32(2);
-                    cmbTerminosPagos.SelectedValue = LectorClientes.GetInt32(3);
-                    lblBalancePendiente.Text = LectorClientes.GetDecimal(4).ToString();
-                    txtLimiteCredito.Text = LectorClientes.GetDecimal(5).ToString();
-                    if (LectorClientes.GetDateTime(6).Equals(DateTime.MinValue))
+                    IdPersona = LectorProveedores.GetInt32(1);
+                    cmbTerminosPagos.SelectedValue = LectorProveedores.GetInt32(2);
+                    lblBalancePendiente.Text = LectorProveedores.GetDecimal(3).ToString();
+                    if (LectorProveedores.GetDateTime(4).Equals(DateTime.MinValue))
                     {
-                        lblUtimaVenta.Text = "-";
+                        lblUtimaCompra.Text = "-";
                     }
                     else
                     {
-                        lblUtimaVenta.Text = LectorClientes.GetDateTime(6).ToShortDateString();
+                        lblUtimaCompra.Text = LectorProveedores.GetDateTime(4).ToShortDateString();
                     }
-                    chkBloqueado.Checked = LectorClientes.GetBoolean(7);
-                    txtNombre.Text = LectorClientes.GetString(9);
-                    txtIdentificacion.Text = LectorClientes.GetString(10).ToString();
-                    txtCorreoElectronico.Text = LectorClientes.GetString(11).ToString();
-                    txtDireccion.Text = LectorClientes.GetString(12).ToString();
-                    txtTelefono1.Text = LectorClientes.GetString(13).ToString();
-                    txtTelefono2.Text = LectorClientes.GetString(14).ToString();
-                    txtFax.Text = LectorClientes.GetString(15).ToString();
-                    txtCelular.Text = LectorClientes.GetString(16).ToString();
-                    txtObservaciones.Text = LectorClientes.GetString(17).ToString();
-                    txtPaginaWeb.Text = LectorClientes.GetString(18).ToString();
-                    lblFechaRegistro.Text = LectorClientes.GetDateTime(19).ToShortDateString();
-                    if (LectorClientes.GetString(21).Length > 0)
+                    chkBloqueado.Checked = LectorProveedores.GetBoolean(5);
+                    txtNombre.Text = LectorProveedores.GetString(7);
+                    txtIdentificacion.Text = LectorProveedores.GetString(8).ToString();
+                    txtCorreoElectronico.Text = LectorProveedores.GetString(9).ToString();
+                    txtDireccion.Text = LectorProveedores.GetString(10).ToString();
+                    txtTelefono1.Text = LectorProveedores.GetString(11).ToString();
+                    txtTelefono2.Text = LectorProveedores.GetString(12).ToString();
+                    txtFax.Text = LectorProveedores.GetString(13).ToString();
+                    txtCelular.Text = LectorProveedores.GetString(14).ToString();
+                    txtObservaciones.Text = LectorProveedores.GetString(15).ToString();
+                    txtPaginaWeb.Text = LectorProveedores.GetString(16).ToString();
+                    lblFechaRegistro.Text = LectorProveedores.GetDateTime(17).ToShortDateString();
+                    if (LectorProveedores.GetString(19).Length > 0)
                     {
-                        pbxCliente.Image = Image.FromFile(LectorClientes.GetString(21));
-                        pbxCliente.ImageLocation = LectorClientes.GetString(21);
+                        pbxProveedor.Image = Image.FromFile(LectorProveedores.GetString(19));
+                        pbxProveedor.ImageLocation = LectorProveedores.GetString(19);
                         btnQuitarFoto.Visible = true;
                     }
                     else
-                    { 
-                        pbxCliente.Image = PymeSoft.Properties.Resources.default_user_icon;
-                        pbxCliente.ImageLocation = "";
+                    {
+                        pbxProveedor.Image = PymeSoft.Properties.Resources.default_user_icon;
+                        pbxProveedor.ImageLocation = "";
                         btnQuitarFoto.Visible = false;
                     }
-                    //cmbListaPrecios.SelectedValue = LectorClientes.GetInt32(18);
                     btnRegistroAnterior.Enabled = btnRegistroSiguiente.Enabled = true;
                 }
                 //De lo contrario, si no se encontró ningun registro, Enviamos un mensaje al usuario.
@@ -270,7 +254,7 @@ namespace PymeSoft
                 }
 
                 //Borramos el lector que almacena el registro, para poder utilizarlo nuevamente
-                LectorClientes.Close();
+                LectorProveedores.Close();
             }
             catch (Exception Error)
             {
@@ -338,40 +322,6 @@ namespace PymeSoft
             }
         }
 
-        /********************************************************************************
-         *                              ValidarCamposNumericos()                        *
-         *                                        -                                     *
-         *       Metodo que permite validar si la tecla pulsada es un numero o no       *
-         ********************************************************************************/
-        private bool ValidarCamposNumericos(char caracter)
-        {
-            if ((caracter >= 48 && caracter <= 57) || (caracter == 8))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        /********************************************************************************
-         *                     ValidarCamposNumericosDecimales()                        *
-         *                                     -                                        *
-         *    Metodo que permite validar si la tecla pulsada es un numero/punto o no    *
-         ********************************************************************************/
-        private bool ValidarCamposNumericosDecimales(char caracter)
-        {
-            if ((caracter >= 48 && caracter <= 57) || (caracter == 8) || caracter == 46)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         private void btnRetornar_Click(object sender, EventArgs e)
         {
             DialogResult d = MessageBox.Show("Está seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -381,42 +331,30 @@ namespace PymeSoft
             }
         }
 
-        private void frmRegistroClientes_Load(object sender, EventArgs e)
+        private void frmRegistroProveedores_Load(object sender, EventArgs e)
         {
             LlenarDataGridView();
             BuscarRegistroMayoryMenor();
-            LLenarComboBoxVendedores();
             LLenarComboBoxTerminosPago();
-            cmbTerminosPagos.SelectedIndex = cmbListaPrecios.SelectedIndex = cmbVendedores.SelectedIndex = -1;
-            cmbVendedores.SelectedIndex = cmbTerminosPagos.SelectedIndex = 0;
-            pbxCliente.ImageLocation = "";
+            cmbTerminosPagos.SelectedIndex = -1;
+            cmbTerminosPagos.SelectedIndex = 0;
+            pbxProveedor.ImageLocation = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("Debe indicar el nombre del cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                tabControlClientes.SelectedTab = tabDatosGenerales;
+                MessageBox.Show("Debe indicar el nombre del proveedor", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                tabControlProveedores.SelectedTab = tabDatosGenerales;
                 txtNombre.Focus();
                 return;
             }
 
-            /*if (cmbListaPrecios.SelectedIndex < 0)
+            if (pbxProveedor.ImageLocation.Length > 0)
             {
-                MessageBox.Show("Debe indicar un tipo de cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return;
-            }*/
-
-            if (string.IsNullOrEmpty(txtLimiteCredito.Text))
-            {
-                txtLimiteCredito.Text = "0";
+                rutaImagen = pbxProveedor.ImageLocation.Replace("\\", "\\\\");
             }
-
-            if (pbxCliente.ImageLocation.Length > 0)
-            {
-                rutaImagen = pbxCliente.ImageLocation.Replace("\\", "\\\\");
-            }            
 
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
@@ -428,19 +366,17 @@ namespace PymeSoft
                 valores = "'" + txtNombre.Text.Trim() + "', '" + txtIdentificacion.Text.Trim() + "',  '" + txtCorreoElectronico.Text.Trim() + "'," +
                           "'" + txtDireccion.Text.Trim() + "', '" + txtTelefono1.Text.Trim() + "', '" + txtTelefono2.Text.Trim() + "'," +
                           "'" + txtFax.Text.Trim() + "', '" + txtCelular.Text.Trim() + "', '" + txtObservaciones.Text.Trim() + "'," +
-                          "'" + txtPaginaWeb.Text.Trim() + "', '1', '" + rutaImagen +"'";
+                          "'" + txtPaginaWeb.Text.Trim() + "', '1', '" + rutaImagen + "'";
                 try
                 {
                     if (conexion.insertarRegistro(tabla, campos, valores))
                     {
                         BuscarPersona();
-                        tabla = "Clientes";
-                        campos = " persona_id, vendedor_id, termino_pago_id, cliente_limite_credito, cliente_estado_registro";
-                        valores = "'" + IdPersona + "', '" + cmbVendedores.SelectedValue + "',  '" + cmbTerminosPagos.SelectedValue + "'," +
-                                  "'" + txtLimiteCredito.Text.Trim() + "', '" + Bloqueado + "'";
+                        tabla = "Proveedores";
+                        campos = " persona_id, termino_pago_id, proveedor_estado_registro";
+                        valores = "'" + IdPersona + "', '" + cmbTerminosPagos.SelectedValue + "','" + Bloqueado + "'";
                         if (conexion.insertarRegistro(tabla, campos, valores))
                         {
-
                             MessageBox.Show("Registro Insertado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Limpiar(this);
                             LlenarDataGridView();
@@ -472,11 +408,9 @@ namespace PymeSoft
                 {
                     if (conexion.actualizarRegistro(tabla, campos, condicion))
                     {
-                        campos = " vendedor_id                  = '" + cmbVendedores.SelectedValue + "'," +
-                                 " termino_pago_id              = '" + cmbTerminosPagos.SelectedValue + "'," +
-                                 " cliente_limite_credito       = '" + txtLimiteCredito.Text.Trim() + "'," +
-                                 " cliente_estado_registro      = '" + Bloqueado + "'";
-                        tabla = " Clientes";
+                        campos = " termino_pago_id              = '" + cmbTerminosPagos.SelectedValue + "'," +
+                                 " proveedor_estado_registro    = '" + Bloqueado + "'";
+                        tabla = " Proveedores";
                         condicion = " id =" + txtCodigo.Text;
                         if (conexion.actualizarRegistro(tabla, campos, condicion))
                         {
@@ -542,11 +476,11 @@ namespace PymeSoft
             txtNombre.Focus();
         }
 
-        private void dgvClientes_DoubleClick(object sender, EventArgs e)
+        private void dgvProveedores_DoubleClick(object sender, EventArgs e)
         {
-            if (dgvClientes.Rows.Count > 0)
+            if (dgvProveedores.Rows.Count > 0)
             {
-                txtCodigo.Text = dgvClientes[0, dgvClientes.SelectedCells[0].RowIndex].Value.ToString();
+                txtCodigo.Text = dgvProveedores[0, dgvProveedores.SelectedCells[0].RowIndex].Value.ToString();
             }
             else
             {
@@ -554,7 +488,7 @@ namespace PymeSoft
             }
         }
 
-        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
             if (txtCodigo.Text.Length > 0)
             {
@@ -563,13 +497,13 @@ namespace PymeSoft
                 {
                     try
                     {
-                        conexion.eliminarRegistro("Clientes", "id=" + txtCodigo.Text);
+                        conexion.eliminarRegistro("Proveedores", "id=" + txtCodigo.Text);
                         conexion.eliminarRegistro("Personas", "id=" + IdPersona);
                         MessageBox.Show("Registro Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch(Exception error)
+                    catch (Exception error)
                     {
-                        MessageBox.Show("Este cliente no puede ser eliminado porque tiene registros dependientes (Facturas, Pagos, Devoluciones, etc.) " + error.Message, "Aviso - eliminarRegistro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+                        MessageBox.Show("Este proveedor no puede ser eliminado porque tiene registros dependientes (Compras, Pagos, etc.) " + error.Message, "Aviso - eliminarRegistro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
                         return;
                     }
                     finally
@@ -583,34 +517,24 @@ namespace PymeSoft
             }
             else
             {
-                MessageBox.Show("No hay un cliente seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay un proveedor seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
 
-        private void txtLimiteCredito_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = ValidarCamposNumericosDecimales(e.KeyChar);
-        }
-
-        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = ValidarCamposNumericos(e.KeyChar);
-        }
-
-        private void rdbID_CheckedChanged(object sender, EventArgs e)
+        private void rdbCodigo_CheckedChanged(object sender, EventArgs e)
         {
             txtCriterio.Text = "";
             txtCriterio.Focus();
         }
 
-        private void rdbDescripción_CheckedChanged(object sender, EventArgs e)
+        private void rdbNombre_CheckedChanged(object sender, EventArgs e)
         {
             txtCriterio.Text = "";
             txtCriterio.Focus();
         }
 
-        private void rdbTipo_CheckedChanged(object sender, EventArgs e)
+        private void rdbIdentificacion_CheckedChanged(object sender, EventArgs e)
         {
             txtCriterio.Text = "";
             txtCriterio.Focus();
@@ -621,7 +545,7 @@ namespace PymeSoft
             query = "";
             if (e.KeyChar == 13)
             {
-                if (rdbCodigo.Checked == false && rdbNombre.Checked == false && rdbIdentificacion.Checked == false && rdbVendedor.Checked == false)
+                if (rdbCodigo.Checked == false && rdbNombre.Checked == false && rdbIdentificacion.Checked == false)
                 {
                     MessageBox.Show("Elija un criterio de búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                     return;
@@ -632,10 +556,10 @@ namespace PymeSoft
                     {
                         try
                         {
-                            query = SQL + " WHERE clientes.id = '" + txtCriterio.Text.Trim() + "'";
-                            conexion.consultar(query, "clientes");
-                            dgvClientes.DataSource = conexion.ds.Tables["clientes"];
-                            dgvClientes.Refresh();
+                            query = SQL + " WHERE Proveedores.id = '" + txtCriterio.Text.Trim() + "'";
+                            conexion.consultar(query, "Proveedores");
+                            dgvProveedores.DataSource = conexion.ds.Tables["Proveedores"];
+                            dgvProveedores.Refresh();
                         }
                         catch (Exception Error)
                         {
@@ -648,9 +572,9 @@ namespace PymeSoft
                         try
                         {
                             query = SQL + " WHERE personas.persona_nombre LIKE '%" + txtCriterio.Text.Trim() + "%'";
-                            conexion.consultar(query, "Clientes");
-                            dgvClientes.DataSource = conexion.ds.Tables["Clientes"];
-                            dgvClientes.Refresh();
+                            conexion.consultar(query, "Proveedores");
+                            dgvProveedores.DataSource = conexion.ds.Tables["Proveedores"];
+                            dgvProveedores.Refresh();
                         }
                         catch (Exception Error)
                         {
@@ -663,24 +587,9 @@ namespace PymeSoft
                         try
                         {
                             query = SQL + " WHERE personas.persona_identificacion LIKE '%" + txtCriterio.Text.Trim() + "%'";
-                            conexion.consultar(query, "Clientes");
-                            dgvClientes.DataSource = conexion.ds.Tables["Clientes"];
-                            dgvClientes.Refresh();
-                        }
-                        catch (Exception Error)
-                        {
-                            MessageBox.Show(Error.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                            return;
-                        }
-                    }
-                    else if (rdbVendedor.Checked == true)
-                    {
-                        try
-                        {
-                            query = SQL + " WHERE p2.persona_nombre LIKE '%" + txtCriterio.Text.Trim() + "%'";
-                            conexion.consultar(query, "Clientes");
-                            dgvClientes.DataSource = conexion.ds.Tables["Clientes"];
-                            dgvClientes.Refresh();
+                            conexion.consultar(query, "Proveedores");
+                            dgvProveedores.DataSource = conexion.ds.Tables["Proveedores"];
+                            dgvProveedores.Refresh();
                         }
                         catch (Exception Error)
                         {
@@ -692,9 +601,9 @@ namespace PymeSoft
                     {
                         try
                         {
-                            conexion.consultar(SQL, "clientes");
-                            dgvClientes.DataSource = conexion.ds.Tables["clientes"];
-                            dgvClientes.Refresh();
+                            conexion.consultar(SQL, "Proveedores");
+                            dgvProveedores.DataSource = conexion.ds.Tables["Proveedores"];
+                            dgvProveedores.Refresh();
                         }
                         catch (Exception Error)
                         {
@@ -745,28 +654,28 @@ namespace PymeSoft
             }
         }
 
-        private void pbxCliente_Click(object sender, EventArgs e)
+        private void pbxProveedor_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Archivos de Imagen|*.jpg|*.gif|*.png";
-            dialog.Title = "Buscar Imagen del Cliente";
-            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);                
+            dialog.Title = "Buscar Imagen del Proveedor";
+            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 
             DialogResult result = dialog.ShowDialog();
 
             // Si seleccionó una imagen, la mostramos en el PictureBox.
             if (result == DialogResult.OK)
             {
-                this.pbxCliente.Image = Image.FromFile(dialog.FileName);
-                this.pbxCliente.ImageLocation = dialog.FileName;
+                this.pbxProveedor.Image = Image.FromFile(dialog.FileName);
+                this.pbxProveedor.ImageLocation = dialog.FileName;
                 btnQuitarFoto.Visible = true;
             }
         }
 
         private void btnQuitarFoto_Click(object sender, EventArgs e)
         {
-            pbxCliente.Image = PymeSoft.Properties.Resources.default_user_icon;
-            pbxCliente.ImageLocation = "";
+            pbxProveedor.Image = PymeSoft.Properties.Resources.default_user_icon;
+            pbxProveedor.ImageLocation = "";
             rutaImagen = "";
             btnQuitarFoto.Visible = false;
         }

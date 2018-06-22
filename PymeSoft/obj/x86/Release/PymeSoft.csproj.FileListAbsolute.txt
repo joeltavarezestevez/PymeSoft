@@ -1,0 +1,10 @@
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.frmRegistroClientes.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.Properties.Resources.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.csproj.GenerateResource.Cache
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\bin\Release\PymeSoft.exe
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\bin\Release\PymeSoft.pdb
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.Configuracion.frmConfiguracionGeneral.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.frmRegistroProveedores.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.exe
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.pdb
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Release\PymeSoft.frmMenuPrincipal.resources

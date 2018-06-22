@@ -33,6 +33,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.gbxOpciones = new System.Windows.Forms.GroupBox();
             this.tabCondiciones = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,12 +46,17 @@
             this.cmbListaPrecios = new System.Windows.Forms.ComboBox();
             this.chkBloqueado = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.cmbFormasPagos = new System.Windows.Forms.ComboBox();
+            this.cmbTerminosPagos = new System.Windows.Forms.ComboBox();
             this.txtLimiteCredito = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cmbVendedores = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tabDatosGenerales = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtTelefono2 = new System.Windows.Forms.MaskedTextBox();
             this.lblUtimaVenta = new System.Windows.Forms.LinkLabel();
             this.lblBalancePendiente = new System.Windows.Forms.Label();
             this.lblFechaRegistro = new System.Windows.Forms.Label();
@@ -84,10 +90,6 @@
             this.rdbIdentificacion = new System.Windows.Forms.RadioButton();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.rdbCodigo = new System.Windows.Forms.RadioButton();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtTelefono2 = new System.Windows.Forms.MaskedTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.btnRegistroSiguiente = new System.Windows.Forms.Button();
             this.btnRegistroAnterior = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -97,13 +99,10 @@
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnQuitarFoto = new System.Windows.Forms.Button();
             this.pbxCliente = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxOpciones.SuspendLayout();
             this.tabCondiciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
@@ -114,8 +113,8 @@
             this.gbxParametros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -161,21 +160,19 @@
             // tabCondiciones
             // 
             this.tabCondiciones.Controls.Add(this.linkLabel1);
-            this.tabCondiciones.Controls.Add(this.pictureBox3);
-            this.tabCondiciones.Controls.Add(this.pictureBox1);
             this.tabCondiciones.Controls.Add(this.label14);
             this.tabCondiciones.Controls.Add(this.dgvContactos);
             this.tabCondiciones.Controls.Add(this.label25);
             this.tabCondiciones.Controls.Add(this.cmbListaPrecios);
             this.tabCondiciones.Controls.Add(this.chkBloqueado);
             this.tabCondiciones.Controls.Add(this.label23);
-            this.tabCondiciones.Controls.Add(this.cmbFormasPagos);
-            this.tabCondiciones.Controls.Add(this.txtDescuento);
+            this.tabCondiciones.Controls.Add(this.cmbTerminosPagos);
             this.tabCondiciones.Controls.Add(this.txtLimiteCredito);
             this.tabCondiciones.Controls.Add(this.label19);
             this.tabCondiciones.Controls.Add(this.cmbVendedores);
-            this.tabCondiciones.Controls.Add(this.label21);
             this.tabCondiciones.Controls.Add(this.label22);
+            this.tabCondiciones.Controls.Add(this.pictureBox3);
+            this.tabCondiciones.Controls.Add(this.pictureBox1);
             this.tabCondiciones.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCondiciones.Location = new System.Drawing.Point(4, 26);
             this.tabCondiciones.Name = "tabCondiciones";
@@ -183,6 +180,18 @@
             this.tabCondiciones.TabIndex = 2;
             this.tabCondiciones.Text = "Condiciones y Contactos";
             this.tabCondiciones.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(280, 150);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(172, 17);
+            this.linkLabel1.TabIndex = 36;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar Persona de Contacto";
+            this.linkLabel1.Visible = false;
             // 
             // label14
             // 
@@ -219,7 +228,6 @@
             this.dgvContactos.Size = new System.Drawing.Size(736, 176);
             this.dgvContactos.TabIndex = 32;
             this.dgvContactos.Visible = false;
-            this.dgvContactos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellClick);
             this.dgvContactos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellContentClick);
             this.dgvContactos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvContactos_CellPainting);
             // 
@@ -271,6 +279,7 @@
             this.label25.TabIndex = 31;
             this.label25.Text = "Lista de Precios";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label25.Visible = false;
             // 
             // cmbListaPrecios
             // 
@@ -281,56 +290,58 @@
             this.cmbListaPrecios.MaxDropDownItems = 10;
             this.cmbListaPrecios.Name = "cmbListaPrecios";
             this.cmbListaPrecios.Size = new System.Drawing.Size(240, 25);
-            this.cmbListaPrecios.TabIndex = 30;
+            this.cmbListaPrecios.TabIndex = 15;
+            this.cmbListaPrecios.Visible = false;
             // 
             // chkBloqueado
             // 
             this.chkBloqueado.AutoSize = true;
             this.chkBloqueado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBloqueado.Location = new System.Drawing.Point(417, 89);
+            this.chkBloqueado.Location = new System.Drawing.Point(276, 86);
             this.chkBloqueado.Name = "chkBloqueado";
             this.chkBloqueado.Size = new System.Drawing.Size(91, 21);
-            this.chkBloqueado.TabIndex = 28;
+            this.chkBloqueado.TabIndex = 17;
             this.chkBloqueado.Text = "Bloqueado?";
             this.chkBloqueado.UseVisualStyleBackColor = true;
+            this.chkBloqueado.CheckedChanged += new System.EventHandler(this.chkBloqueado_CheckedChanged);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(157, 65);
+            this.label23.Location = new System.Drawing.Point(16, 62);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(175, 17);
             this.label23.TabIndex = 27;
             this.label23.Text = "Términos de Pago por defecto";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbFormasPagos
+            // cmbTerminosPagos
             // 
-            this.cmbFormasPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFormasPagos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFormasPagos.FormattingEnabled = true;
-            this.cmbFormasPagos.Location = new System.Drawing.Point(155, 85);
-            this.cmbFormasPagos.MaxDropDownItems = 10;
-            this.cmbFormasPagos.Name = "cmbFormasPagos";
-            this.cmbFormasPagos.Size = new System.Drawing.Size(240, 25);
-            this.cmbFormasPagos.TabIndex = 26;
+            this.cmbTerminosPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTerminosPagos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTerminosPagos.FormattingEnabled = true;
+            this.cmbTerminosPagos.Location = new System.Drawing.Point(14, 82);
+            this.cmbTerminosPagos.MaxDropDownItems = 10;
+            this.cmbTerminosPagos.Name = "cmbTerminosPagos";
+            this.cmbTerminosPagos.Size = new System.Drawing.Size(240, 25);
+            this.cmbTerminosPagos.TabIndex = 16;
             // 
             // txtLimiteCredito
             // 
             this.txtLimiteCredito.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimiteCredito.Location = new System.Drawing.Point(14, 34);
+            this.txtLimiteCredito.Location = new System.Drawing.Point(273, 33);
             this.txtLimiteCredito.MaxLength = 10;
             this.txtLimiteCredito.Name = "txtLimiteCredito";
             this.txtLimiteCredito.Size = new System.Drawing.Size(125, 25);
-            this.txtLimiteCredito.TabIndex = 21;
+            this.txtLimiteCredito.TabIndex = 14;
             this.txtLimiteCredito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLimiteCredito_KeyPress);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(157, 14);
+            this.label19.Location = new System.Drawing.Point(16, 13);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(61, 17);
             this.label19.TabIndex = 25;
@@ -342,17 +353,17 @@
             this.cmbVendedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVendedores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVendedores.FormattingEnabled = true;
-            this.cmbVendedores.Location = new System.Drawing.Point(155, 34);
+            this.cmbVendedores.Location = new System.Drawing.Point(14, 33);
             this.cmbVendedores.MaxDropDownItems = 10;
             this.cmbVendedores.Name = "cmbVendedores";
             this.cmbVendedores.Size = new System.Drawing.Size(240, 25);
-            this.cmbVendedores.TabIndex = 24;
+            this.cmbVendedores.TabIndex = 13;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(14, 14);
+            this.label22.Location = new System.Drawing.Point(273, 13);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(102, 17);
             this.label22.TabIndex = 20;
@@ -362,6 +373,7 @@
             // 
             this.tabDatosGenerales.BackColor = System.Drawing.SystemColors.Control;
             this.tabDatosGenerales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabDatosGenerales.Controls.Add(this.btnQuitarFoto);
             this.tabDatosGenerales.Controls.Add(this.label24);
             this.tabDatosGenerales.Controls.Add(this.label20);
             this.tabDatosGenerales.Controls.Add(this.txtCelular);
@@ -399,6 +411,57 @@
             this.tabDatosGenerales.Size = new System.Drawing.Size(742, 373);
             this.tabDatosGenerales.TabIndex = 0;
             this.tabDatosGenerales.Text = "Generales";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(229, 14);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(14, 17);
+            this.label24.TabIndex = 39;
+            this.label24.Text = "*";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(346, 166);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(47, 17);
+            this.label20.TabIndex = 38;
+            this.label20.Text = "Celular";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Culture = new System.Globalization.CultureInfo("es-ES");
+            this.txtCelular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(346, 185);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(160, 25);
+            this.txtCelular.TabIndex = 9;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(180, 116);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(66, 17);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "Teléfono 2";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTelefono2
+            // 
+            this.txtTelefono2.Culture = new System.Globalization.CultureInfo("es-ES");
+            this.txtTelefono2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono2.Location = new System.Drawing.Point(180, 135);
+            this.txtTelefono2.Name = "txtTelefono2";
+            this.txtTelefono2.Size = new System.Drawing.Size(160, 25);
+            this.txtTelefono2.TabIndex = 6;
             // 
             // lblUtimaVenta
             // 
@@ -481,7 +544,7 @@
             this.txtPaginaWeb.MaxLength = 100;
             this.txtPaginaWeb.Name = "txtPaginaWeb";
             this.txtPaginaWeb.Size = new System.Drawing.Size(496, 25);
-            this.txtPaginaWeb.TabIndex = 9;
+            this.txtPaginaWeb.TabIndex = 10;
             // 
             // txtCorreoElectronico
             // 
@@ -503,7 +566,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(496, 50);
-            this.txtObservaciones.TabIndex = 10;
+            this.txtObservaciones.TabIndex = 11;
             // 
             // txtDireccion
             // 
@@ -583,7 +646,7 @@
             this.txtFax.Location = new System.Drawing.Point(346, 135);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(160, 25);
-            this.txtFax.TabIndex = 8;
+            this.txtFax.TabIndex = 7;
             // 
             // label10
             // 
@@ -603,7 +666,7 @@
             this.txtTelefono1.Location = new System.Drawing.Point(14, 135);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(160, 25);
-            this.txtTelefono1.TabIndex = 7;
+            this.txtTelefono1.TabIndex = 5;
             // 
             // label6
             // 
@@ -666,7 +729,7 @@
             this.tabControlClientes.Name = "tabControlClientes";
             this.tabControlClientes.SelectedIndex = 0;
             this.tabControlClientes.Size = new System.Drawing.Size(750, 403);
-            this.tabControlClientes.TabIndex = 0;
+            this.tabControlClientes.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -689,13 +752,14 @@
             this.dgvClientes.AllowUserToResizeRows = false;
             this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(6, 21);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(734, 130);
-            this.dgvClientes.TabIndex = 24;
+            this.dgvClientes.TabIndex = 29;
             this.dgvClientes.DoubleClick += new System.EventHandler(this.dgvClientes_DoubleClick);
             // 
             // gbxParametros
@@ -722,7 +786,7 @@
             this.rdbVendedor.Location = new System.Drawing.Point(451, 20);
             this.rdbVendedor.Name = "rdbVendedor";
             this.rdbVendedor.Size = new System.Drawing.Size(86, 21);
-            this.rdbVendedor.TabIndex = 24;
+            this.rdbVendedor.TabIndex = 28;
             this.rdbVendedor.TabStop = true;
             this.rdbVendedor.Text = "Vendedor";
             this.rdbVendedor.UseVisualStyleBackColor = true;
@@ -732,7 +796,7 @@
             this.txtCriterio.Location = new System.Drawing.Point(121, 48);
             this.txtCriterio.Name = "txtCriterio";
             this.txtCriterio.Size = new System.Drawing.Size(430, 25);
-            this.txtCriterio.TabIndex = 20;
+            this.txtCriterio.TabIndex = 24;
             this.txtCriterio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCriterio_KeyPress);
             // 
             // rdbIdentificacion
@@ -742,7 +806,7 @@
             this.rdbIdentificacion.Location = new System.Drawing.Point(320, 21);
             this.rdbIdentificacion.Name = "rdbIdentificacion";
             this.rdbIdentificacion.Size = new System.Drawing.Size(100, 21);
-            this.rdbIdentificacion.TabIndex = 23;
+            this.rdbIdentificacion.TabIndex = 27;
             this.rdbIdentificacion.TabStop = true;
             this.rdbIdentificacion.Text = "Cédula/RNC";
             this.rdbIdentificacion.UseVisualStyleBackColor = true;
@@ -755,7 +819,7 @@
             this.rdbNombre.Location = new System.Drawing.Point(216, 20);
             this.rdbNombre.Name = "rdbNombre";
             this.rdbNombre.Size = new System.Drawing.Size(76, 21);
-            this.rdbNombre.TabIndex = 22;
+            this.rdbNombre.TabIndex = 26;
             this.rdbNombre.TabStop = true;
             this.rdbNombre.Text = "Nombre";
             this.rdbNombre.UseVisualStyleBackColor = true;
@@ -767,51 +831,11 @@
             this.rdbCodigo.Location = new System.Drawing.Point(122, 20);
             this.rdbCodigo.Name = "rdbCodigo";
             this.rdbCodigo.Size = new System.Drawing.Size(70, 21);
-            this.rdbCodigo.TabIndex = 21;
+            this.rdbCodigo.TabIndex = 25;
             this.rdbCodigo.TabStop = true;
             this.rdbCodigo.Text = "Código";
             this.rdbCodigo.UseVisualStyleBackColor = true;
             this.rdbCodigo.CheckedChanged += new System.EventHandler(this.rdbID_CheckedChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(180, 116);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 17);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Teléfono 2";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtTelefono2
-            // 
-            this.txtTelefono2.Culture = new System.Globalization.CultureInfo("es-ES");
-            this.txtTelefono2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono2.Location = new System.Drawing.Point(180, 135);
-            this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(160, 25);
-            this.txtTelefono2.TabIndex = 35;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(346, 166);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(47, 17);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "Celular";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Culture = new System.Globalization.CultureInfo("es-ES");
-            this.txtCelular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(346, 185);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(160, 25);
-            this.txtCelular.TabIndex = 37;
             // 
             // btnRegistroSiguiente
             // 
@@ -826,7 +850,7 @@
             this.btnRegistroSiguiente.Location = new System.Drawing.Point(841, 108);
             this.btnRegistroSiguiente.Name = "btnRegistroSiguiente";
             this.btnRegistroSiguiente.Size = new System.Drawing.Size(40, 40);
-            this.btnRegistroSiguiente.TabIndex = 13;
+            this.btnRegistroSiguiente.TabIndex = 19;
             this.btnRegistroSiguiente.UseVisualStyleBackColor = true;
             this.btnRegistroSiguiente.Click += new System.EventHandler(this.btnRegistroSiguiente_Click);
             // 
@@ -843,7 +867,7 @@
             this.btnRegistroAnterior.Location = new System.Drawing.Point(795, 108);
             this.btnRegistroAnterior.Name = "btnRegistroAnterior";
             this.btnRegistroAnterior.Size = new System.Drawing.Size(40, 40);
-            this.btnRegistroAnterior.TabIndex = 12;
+            this.btnRegistroAnterior.TabIndex = 18;
             this.btnRegistroAnterior.UseVisualStyleBackColor = true;
             this.btnRegistroAnterior.Click += new System.EventHandler(this.btnRegistroAnterior_Click);
             // 
@@ -890,7 +914,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(46, 25);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
-            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.TabIndex = 20;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -905,7 +929,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(46, 205);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(40, 40);
-            this.btnRetornar.TabIndex = 17;
+            this.btnRetornar.TabIndex = 23;
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
@@ -920,7 +944,7 @@
             this.btnEliminarCliente.Location = new System.Drawing.Point(36, 130);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(64, 64);
-            this.btnEliminarCliente.TabIndex = 16;
+            this.btnEliminarCliente.TabIndex = 22;
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
             this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
@@ -935,7 +959,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(36, 70);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(64, 64);
-            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.TabIndex = 21;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -950,17 +974,45 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // btnQuitarFoto
+            // 
+            this.btnQuitarFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuitarFoto.BackgroundImage")));
+            this.btnQuitarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuitarFoto.FlatAppearance.BorderSize = 0;
+            this.btnQuitarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnQuitarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnQuitarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarFoto.Location = new System.Drawing.Point(606, 156);
+            this.btnQuitarFoto.Name = "btnQuitarFoto";
+            this.btnQuitarFoto.Size = new System.Drawing.Size(24, 20);
+            this.btnQuitarFoto.TabIndex = 40;
+            this.btnQuitarFoto.UseVisualStyleBackColor = true;
+            this.btnQuitarFoto.Visible = false;
+            this.btnQuitarFoto.Click += new System.EventHandler(this.btnQuitarFoto_Click);
+            // 
             // pbxCliente
             // 
             this.pbxCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbxCliente.Image")));
-            this.pbxCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbxCliente.InitialImage")));
+            this.pbxCliente.BackgroundImage = global::PymeSoft.Properties.Resources.default_user_icon;
+            this.pbxCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCliente.InitialImage = global::PymeSoft.Properties.Resources.default_user_icon;
             this.pbxCliente.Location = new System.Drawing.Point(553, 34);
             this.pbxCliente.Name = "pbxCliente";
             this.pbxCliente.Size = new System.Drawing.Size(133, 119);
             this.pbxCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxCliente.TabIndex = 10;
             this.pbxCliente.TabStop = false;
+            this.pbxCliente.Click += new System.EventHandler(this.pbxCliente_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PymeSoft.Properties.Resources.help_icon_2;
+            this.pictureBox3.Location = new System.Drawing.Point(362, 86);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -971,58 +1023,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PymeSoft.Properties.Resources.help_icon_2;
-            this.pictureBox3.Location = new System.Drawing.Point(503, 89);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(229, 14);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 17);
-            this.label24.TabIndex = 39;
-            this.label24.Text = "*";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(280, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(172, 17);
-            this.linkLabel1.TabIndex = 36;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Agregar Persona de Contacto";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescuento.Location = new System.Drawing.Point(14, 85);
-            this.txtDescuento.MaxLength = 2;
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(125, 25);
-            this.txtDescuento.TabIndex = 23;
-            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(14, 65);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 17);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "% Descuento";
+            this.pictureBox1.Visible = false;
             // 
             // frmRegistroClientes
             // 
@@ -1042,6 +1043,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControlClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistroClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PymeSoft 1.0 - Registro de Clientes";
@@ -1059,8 +1061,8 @@
             this.gbxParametros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1081,7 +1083,7 @@
         private System.Windows.Forms.ComboBox cmbListaPrecios;
         private System.Windows.Forms.CheckBox chkBloqueado;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cmbFormasPagos;
+        private System.Windows.Forms.ComboBox cmbTerminosPagos;
         private System.Windows.Forms.TextBox txtLimiteCredito;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cmbVendedores;
@@ -1117,8 +1119,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnRegistroSiguiente;
         private System.Windows.Forms.Button btnRegistroAnterior;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dgvContactos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.GroupBox gbxParametros;
@@ -1126,12 +1126,6 @@
         private System.Windows.Forms.RadioButton rdbIdentificacion;
         private System.Windows.Forms.RadioButton rdbNombre;
         private System.Windows.Forms.RadioButton rdbCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Extension;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo_Electronico;
-        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
         private System.Windows.Forms.RadioButton rdbVendedor;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.MaskedTextBox txtTelefono2;
@@ -1141,7 +1135,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dgvContactos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Extension;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo_Electronico;
+        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
+        private System.Windows.Forms.Button btnQuitarFoto;
     }
 }

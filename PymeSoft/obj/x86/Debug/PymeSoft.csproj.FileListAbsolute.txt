@@ -1,0 +1,13 @@
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.csprojResolveAssemblyReference.cache
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.frmRegistroClientes.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Properties.Resources.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.csproj.GenerateResource.Cache
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\bin\Debug\PymeSoft.exe
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\bin\Debug\PymeSoft.pdb
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.exe
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.pdb
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.frmRegistroProveedores.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.frmMenuPrincipal.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Configuracion.frmConfiguracionEmpresa.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Contactos.frmRegistroVendedores.resources
+C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Contactos.frmContactos.resources

@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\..\DomPlastic ERP\DomPlastic ERP\bin\Release\Npgsql.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.0\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,32 +50,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConexionSQL.cs" />
+    <Compile Include="ConexionMySQL.cs" />
+    <Compile Include="Configuracion\frmConfiguracionEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\frmConfiguracionEmpresa.Designer.cs">
+      <DependentUpon>frmConfiguracionEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contactos\frmContactos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contactos\frmContactos.Designer.cs">
+      <DependentUpon>frmContactos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contactos\frmRegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contactos\frmRegistroClientes.designer.cs">
       <DependentUpon>frmRegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contactos\frmRegistroSuplidores.cs">
+    <Compile Include="Contactos\frmRegistroProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contactos\frmRegistroSuplidores.designer.cs">
-      <DependentUpon>frmRegistroSuplidores.cs</DependentUpon>
+    <Compile Include="Contactos\frmRegistroProveedores.designer.cs">
+      <DependentUpon>frmRegistroProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Contactos\frmRegistroVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Contactos\frmRegistroVendedores.Designer.cs">
+      <DependentUpon>frmRegistroVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Configuracion\frmConfiguracionEmpresa.resx">
+      <DependentUpon>frmConfiguracionEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactos\frmContactos.resx">
+      <DependentUpon>frmContactos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contactos\frmRegistroClientes.resx">
       <DependentUpon>frmRegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contactos\frmRegistroSuplidores.resx">
-      <DependentUpon>frmRegistroSuplidores.cs</DependentUpon>
+    <EmbeddedResource Include="Contactos\frmRegistroProveedores.resx">
+      <DependentUpon>frmRegistroProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactos\frmRegistroVendedores.resx">
+      <DependentUpon>frmRegistroVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,9 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default-user-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logotipo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow-left-icon.png" />
@@ -127,7 +155,6 @@
     <None Include="Resources\help-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuracion\" />
     <Folder Include="Gastos\" />
     <Folder Include="Ingresos\" />
     <Folder Include="Inventario\" />
@@ -138,6 +165,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\help-icon-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\contact_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\income_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\outcome_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\stock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\report_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logout-icon-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
