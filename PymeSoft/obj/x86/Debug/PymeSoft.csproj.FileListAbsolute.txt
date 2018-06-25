@@ -11,3 +11,5 @@ C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.frmMenuPrincipa
 C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Configuracion.frmConfiguracionEmpresa.resources
 C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Contactos.frmRegistroVendedores.resources
 C:\Users\NSPC17\Desktop\PymeSoft\PymeSoft\obj\x86\Debug\PymeSoft.Contactos.frmContactos.resources
+C:\Users\JTE\pymesoft\PymeSoft\obj\x86\Debug\PymeSoft.exe
+C:\Users\JTE\pymesoft\PymeSoft\obj\x86\Debug\PymeSoft.pdb
