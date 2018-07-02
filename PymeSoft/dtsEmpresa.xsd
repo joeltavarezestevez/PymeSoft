@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsEmpresa" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionMySQL" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionMySQL (Settings)" PropertyReference="ApplicationSettings.PymeSoft.Properties.Settings.GlobalReference.Default.conexionMySQL" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmpresaTableAdapter" GeneratorDataComponentClassName="EmpresaTableAdapter" Name="Empresa" UserDataComponentName="EmpresaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionMySQL (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `configuracion_empresa`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="configuracion_empresa_nombre" DataSetColumn="configuracion_empresa_nombre" />
+              <Mapping SourceColumn="configuracion_empresa_eslogan" DataSetColumn="configuracion_empresa_eslogan" />
+              <Mapping SourceColumn="configuracion_empresa_rnc" DataSetColumn="configuracion_empresa_rnc" />
+              <Mapping SourceColumn="configuracion_empresa_direccion" DataSetColumn="configuracion_empresa_direccion" />
+              <Mapping SourceColumn="configuracion_empresa_telefono" DataSetColumn="configuracion_empresa_telefono" />
+              <Mapping SourceColumn="configuracion_empresa_correo_electronico" DataSetColumn="configuracion_empresa_correo_electronico" />
+              <Mapping SourceColumn="configuracion_empresa_sitio_web" DataSetColumn="configuracion_empresa_sitio_web" />
+              <Mapping SourceColumn="configuracion_empresa_logo" DataSetColumn="configuracion_empresa_logo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsEmpresa" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dtsEmpresa" msprop:Generator_UserDSName="dtsEmpresa">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Empresa" msprop:Generator_TableClassName="EmpresaDataTable" msprop:Generator_TableVarName="tableEmpresa" msprop:Generator_TablePropName="Empresa" msprop:Generator_RowDeletingName="EmpresaRowDeleting" msprop:Generator_UserTableName="Empresa" msprop:Generator_RowChangingName="EmpresaRowChanging" msprop:Generator_RowEvHandlerName="EmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpresaRowDeleted" msprop:Generator_RowEvArgName="EmpresaRowChangeEvent" msprop:Generator_RowChangedName="EmpresaRowChanged" msprop:Generator_RowClassName="EmpresaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="configuracion_empresa_nombre" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_nombre" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_nombre" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_nombreColumn" msprop:Generator_UserColumnName="configuracion_empresa_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_eslogan" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_eslogan" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_eslogan" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_esloganColumn" msprop:Generator_UserColumnName="configuracion_empresa_eslogan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_rnc" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_rnc" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_rnc" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_rncColumn" msprop:Generator_UserColumnName="configuracion_empresa_rnc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_direccion" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_direccion" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_direccion" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_direccionColumn" msprop:Generator_UserColumnName="configuracion_empresa_direccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_telefono" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_telefono" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_telefono" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_telefonoColumn" msprop:Generator_UserColumnName="configuracion_empresa_telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="37" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_correo_electronico" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_correo_electronico" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_correo_electronico" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_correo_electronicoColumn" msprop:Generator_UserColumnName="configuracion_empresa_correo_electronico">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_sitio_web" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_sitio_web" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_sitio_web" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_sitio_webColumn" msprop:Generator_UserColumnName="configuracion_empresa_sitio_web">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="configuracion_empresa_logo" msprop:Generator_ColumnVarNameInTable="columnconfiguracion_empresa_logo" msprop:Generator_ColumnPropNameInRow="configuracion_empresa_logo" msprop:Generator_ColumnPropNameInTable="configuracion_empresa_logoColumn" msprop:Generator_UserColumnName="configuracion_empresa_logo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="382" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Empresa" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

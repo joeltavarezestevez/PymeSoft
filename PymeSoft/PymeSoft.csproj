@@ -81,14 +81,19 @@
     <Compile Include="Contactos\frmRegistroVendedores.Designer.cs">
       <DependentUpon>frmRegistroVendedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <Compile Include="dtsCuentasPorCobrar.cs">
+      <DependentUpon>dtsCuentasPorCobrar.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="dtsEmpresa.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DependentUpon>dtsEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsCuentasPorCobrar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCuentasPorCobrar.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -116,11 +121,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\frmReporteClientes.cs">
+    <Compile Include="Reportes\rptCuentasPorCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmReporteClientes.Designer.cs">
-      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    <Compile Include="Reportes\rptCuentasPorCobrar.Designer.cs">
+      <DependentUpon>rptCuentasPorCobrar.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Configuracion\frmConfiguracionEmpresa.resx">
       <DependentUpon>frmConfiguracionEmpresa.cs</DependentUpon>
@@ -154,19 +159,33 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmReporteClientes.resx">
-      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\rptCuentasPorCobrar.resx">
+      <DependentUpon>rptCuentasPorCobrar.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <EmbeddedResource Include="Reportes\rpt\rptCuentasPorPagar.rdlc" />
+    <EmbeddedResource Include="Reportes\rpt\rptCuentasPorCobrar.rdlc" />
+    <None Include="app.config" />
+    <None Include="dtsEmpresa.xsc">
+      <DependentUpon>dtsEmpresa.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsd">
+    <None Include="dtsEmpresa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsEmpresa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsEmpresa.xss">
+      <DependentUpon>dtsEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="dtsCuentasPorCobrar.xsc">
+      <DependentUpon>dtsCuentasPorCobrar.xsd</DependentUpon>
+    </None>
+    <None Include="dtsCuentasPorCobrar.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dtsCuentasPorCobrar.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="dtsCuentasPorCobrar.xss">
+      <DependentUpon>dtsCuentasPorCobrar.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,8 +201,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="rptListadodeUsuarios.rdlc" />
-    <None Include="rptListadodeUsuarios.rdl.data" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default-user-icon.png" />
@@ -254,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\eye_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

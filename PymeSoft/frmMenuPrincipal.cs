@@ -55,9 +55,7 @@ namespace PymeSoft
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = "";
-            lblHora.Text = DateTime.Now.ToShortDateString();
-            lblHora.Text = lblHora.Text + " - " + DateTime.Now.ToLongTimeString();
+            lblHora.Text = DateTime.Now.ToShortDateString() + " - " + DateTime.Now.ToLongTimeString();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,11 +87,11 @@ namespace PymeSoft
             DialogResult d = MessageBox.Show("Está seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.Yes)
             {
-                if (terminarSesion())
-                {
+                //if (terminarSesion())
+                //{
                     Close();
                     Application.Exit();
-                }
+                //}
             }
         }
 
@@ -102,12 +100,12 @@ namespace PymeSoft
             DialogResult d = MessageBox.Show("Está seguro que desea cerrar la sesión?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.Yes)
             {
-                if (terminarSesion())
-                {
+                //if (terminarSesion())
+                //{
                     Hide();
                     frmLogin fl = new frmLogin();
                     fl.Show();
-                }
+                //}
             }
         }
 
@@ -139,6 +137,10 @@ namespace PymeSoft
             usuarios.Show();
         }
 
-
+        private void cuentasPorCobrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.rptCuentasPorCobrar cpc = new Reportes.rptCuentasPorCobrar();
+            cpc.Show();
+        }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracionEmpresa));
-            this.label24 = new System.Windows.Forms.Label();
             this.tabDatosGenerales = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,17 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(147, 14);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 17);
-            this.label24.TabIndex = 39;
-            this.label24.Text = "*";
-            // 
             // tabDatosGenerales
             // 
             this.tabDatosGenerales.BackColor = System.Drawing.SystemColors.Control;
@@ -85,7 +73,6 @@
             this.tabDatosGenerales.Controls.Add(this.txtEslogan);
             this.tabDatosGenerales.Controls.Add(this.label6);
             this.tabDatosGenerales.Controls.Add(this.btnQuitarFoto);
-            this.tabDatosGenerales.Controls.Add(this.label24);
             this.tabDatosGenerales.Controls.Add(this.txtPaginaWeb);
             this.tabDatosGenerales.Controls.Add(this.txtCorreoElectronico);
             this.tabDatosGenerales.Controls.Add(this.txtDireccion);
@@ -151,8 +138,8 @@
             // 
             // txtEslogan
             // 
-            this.txtEslogan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEslogan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEslogan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEslogan.Location = new System.Drawing.Point(14, 243);
             this.txtEslogan.MaxLength = 100;
@@ -188,8 +175,8 @@
             // 
             // txtPaginaWeb
             // 
-            this.txtPaginaWeb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPaginaWeb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPaginaWeb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaginaWeb.Location = new System.Drawing.Point(14, 189);
             this.txtPaginaWeb.MaxLength = 100;
@@ -199,8 +186,8 @@
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorreoElectronico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreoElectronico.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoElectronico.Location = new System.Drawing.Point(180, 135);
             this.txtCorreoElectronico.MaxLength = 200;
@@ -210,8 +197,8 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(121, 85);
             this.txtDireccion.Name = "txtDireccion";
@@ -229,8 +216,8 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(14, 34);
             this.txtNombre.MaxLength = 200;
@@ -281,8 +268,7 @@
             // pbxLogoEmpresa
             // 
             this.pbxLogoEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxLogoEmpresa.BackgroundImage = global::PymeSoft.Properties.Resources.image_icon;
-            this.pbxLogoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxLogoEmpresa.Image = global::PymeSoft.Properties.Resources.image_icon;
             this.pbxLogoEmpresa.InitialImage = global::PymeSoft.Properties.Resources.image_icon;
             this.pbxLogoEmpresa.Location = new System.Drawing.Point(553, 34);
             this.pbxLogoEmpresa.Name = "pbxLogoEmpresa";
@@ -324,8 +310,8 @@
             // 
             // tabControlEmpresa
             // 
-            this.tabControlEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlEmpresa.Controls.Add(this.tabDatosGenerales);
             this.tabControlEmpresa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlEmpresa.Location = new System.Drawing.Point(0, 0);
@@ -444,7 +430,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnQuitarFoto;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TabPage tabDatosGenerales;
         private System.Windows.Forms.TextBox txtPaginaWeb;
         private System.Windows.Forms.TextBox txtCorreoElectronico;
